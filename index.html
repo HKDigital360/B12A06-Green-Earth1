@@ -73,66 +73,76 @@ generations.</p>
 
 
 <section class="bg-[#f0fdf4]">
-<div>
-    <h2 class="text-3xl text-center">Choose Your Trees</h2>
-</div>
-<div  class="w-11/12">
-  <div class="3-col parrent flex">
-
-<div class="mx-auto">
-  <h2 class="text-xl text-black font-bold">Category</h2>
-
-<div>
-  <button class="btn btn-wide w-full mt-3 bg-[#15803d] text-white justify-start">
-      All Tree
-    </button>
-  <div id="plant-category" class="flex flex-col">
-    <button class="btn btn-wide w-full mt-3 bg-[#15803d] text-white justify-start">
-      All Tree
-    </button>
-  </div>
-</div>
-
-</div>
-
-<div id="plant-container" class=" justify-self-center  flex gap-3 flex-wrap w-3/5 items-center mx-auto">
+  <div>
+    <h2 class="text-3xl text-center p-4">Choose Your Trees</h2>
   </div>
 
+  <div class="w-11/12 mx-auto">
+    <!-- Responsive wrapper -->
+    <div class="flex flex-col md:flex-row items-start justify-center gap-6">
 
-<div class="mx-auto">
-  <h2 class="text-xl text-black font-bold">Category</h2>
+      <!-- Category Section -->
+      <div class="w-full md:w-1/4">
+        <h2 class="text-xl text-black font-bold">Category</h2>
+        <div>
+          <button class="btn btn-wide w-full mt-3 bg-[#15803d] text-white justify-start">
+            All Tree
+          </button>
+          <div id="plant-category" class="flex flex-col">
+            <button class="btn btn-wide w-full mt-3 bg-[#15803d] text-white justify-start">
+              All Tree
+            </button>
+          </div>
+        </div>
+      </div>
 
-<div>
-  <button class="btn btn-wide w-full mt-3 bg-[#15803d] text-white justify-start">
-      All Tree
-    </button>
-  <div id="plant-category" class="flex flex-col">
-    <button class="btn btn-wide w-full mt-3 bg-[#15803d] text-white justify-start">
-      All Tree
-    </button>
+      <!-- Tree + Cart wrapper -->
+      <div class="flex flex-col md:flex-row w-full md:w-3/4 gap-6">
+
+        <!-- Tree Cards Section -->
+       <div id="plant-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full md:w-3/4 mx-auto">
+  <!-- Cards will be injected here -->
+</div>
+
+
+        <!-- Cart Section -->
+        <div id="cart-section" class="bg-white rounded-xl p-5 w-full h-full md:w-1/4 shadow-lg">
+          <h2 class="text-xl font-bold text-green-900 mb-4 text-center">Your Cart</h2>
+          <ul id="cart-items" class="space-y-2"></ul>
+          <div class="mt-4 font-semibold text-right">
+            Total: <span id="cart-total">৳0</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
-</div>
 
-</div>
-
+  <!-- About Section -->
+  <div class="p-10">
+    <h2 class="text-center font-bold text-xl pb-5">About The Campaign</h2>
+    <div class="w-11/12">
+      <div class="justify-center mx-auto my-auto flex flex-col md:flex-row items-center w-3/5 gap-10">
+        <img src="./assets/about.png" alt="">
+        <div class="justify-center">
+          <p>
+            Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
+          </p>
+          <li>Restoration of natural habitats</li>
+          <li>Improvement of air quality</li>
+          <li>Support for local communities</li>
+        </div>
+      </div>
+    </div>
   </div>
-  
-</div>
-
-<div class="p-10">
-
-<h2 class="text-center font-bold text-xl pb-5">About The Campaign</h2>
-<div class=" w-11/12 ">
-  <div class="justify-center mx-auto my-auto flex flex-col md:flex-row items-center w-3/5 gap-15"><img src="./assets/about.png" alt="">
-<div class="justify-center">  <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
-  <li>  Restoration of natural habitats</li>
-  <li>  Improvement of air quality</li>
-  <li>  Support for local communities</li></div></div>
-</div>
-
-
-</div>
 </section>
+
+
+
+
+
+
+
 
 
 <section class="bg-[#dcfce7] min-h-[370px]">

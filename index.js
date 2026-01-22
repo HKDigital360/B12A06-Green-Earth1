@@ -47,7 +47,7 @@ for( let plant of plants){
 const plantDiv = document.createElement("div");
 plantDiv.innerHTML=`
 
-  <div class="w-[340px] h-auto border-2 border-red-800 p-3 mx-auto my-auto bg-[#ffffff] rounded-2xl ">
+  <div class="w-full h-auto border-2 border-red-800 p-3 mx-auto my-auto bg-[#ffffff] rounded-2xl ">
     <img class="rounded-xl  border-2 border-blue-700 w-[300px] h-[180px] " src="${plant.image}" alt="">
     <h2 class="text-lg font-semibold">${plant.name}</h2>
     <p>${plant.description}</p>
