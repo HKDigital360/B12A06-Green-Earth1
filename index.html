@@ -13,14 +13,28 @@
    
    <body class="bg-[#f0fdf4]"> 
    
-     <header class="navbar bg-[#15803d] shadow-sm"> <div class="navbar-start"> <a class="btn btn-ghost text-xl text-white">Green Earth</a> </div> <div class="navbar-center hidden lg:flex"> <ul class="menu menu-horizontal px-1"> <li class="text-white hover:bg-green-800 rounded-xl"><a>About</a></li> <li class="text-white hover:bg-green-800 rounded-xl"><a>Gallery</a></li> <li class="text-white hover:bg-green-800 rounded-xl"><a>Plant a Tree</a></li> </ul> </div> <div class="navbar-end"> <a class="btn bg-[#facc15] rounded-xl text-green-700 hover:bg-yellow-600">Plant a Tree</a> </div> </header> 
+     <header class="navbar bg-[#15803d] shadow-sm"> <div class="navbar-start"> 
+      <a class="btn btn-ghost text-xl text-white">Green Earth</a> 
+    </div> 
+    <div class="navbar-center hidden lg:flex">
+       <ul class="menu menu-horizontal px-1">
+         <li class="text-white hover:bg-green-800 rounded-xl"><a>About</a></li> 
+         <li class="text-white hover:bg-green-800 rounded-xl"><a>Gallery</a>
+        </li> 
+        <li class="text-white hover:bg-green-800 rounded-xl"><a>Plant a Tree</a>
+        </li> 
+      </ul> 
+    </div> 
+    <div class="navbar-end"> <a class="btn bg-[#facc15] rounded-xl text-green-700 hover:bg-yellow-600">Plant a Tree</a> 
+    </div> 
+  </header> 
 
   <!-- Hero --> 
   <section class="bg-[#cff0dc] flex flex-col md:flex-row justify-between items-center p-6"> 
     <img src="./assets/hero-leaf1.png" alt=""> 
     <div class="text-center max-w-lg"> 
-      <h1 class="text-3xl font-semibold mb-4">Plant a Tree, Grow a Future</h1> 
-      <p class="mb-4">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p> 
+      <h1 class="text-3xl text-black font-semibold mb-4">Plant a Tree, Grow a Future</h1> 
+      <p class="mb-4 text-black">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p> 
       <a class="btn bg-[#facc15] rounded-xl text-green-700 hover:bg-yellow-600">Get Involved</a>
      </div> <img src="./assets/hero-leaf2.png" alt=""> 
 
@@ -30,10 +44,14 @@
    <section class="bg-[#f0fdf4] py-10"> 
     <h2 class="text-3xl text-black text-center font-bold mb-6">Choose Your Trees</h2> 
     <div class="w-11/12 mx-auto flex flex-col md:flex-row gap-6"> 
+
   <!-- Category --> 
-   <div class="w-full md:w-1/4"> 
-    <h2 class="text-xl text-black font-bold mb-3">Category</h2> <div id="plant-category" class="flex flex-col"></div> 
+   <div class="w-full max-h-screen md:w-1/4"> 
+    <h2 class="text-xl text-black font-bold mb-3">Category</h2> 
+    <div id="plant-category" class="flex flex-col">
+    </div> 
   </div> 
+
   <!-- Tree Cards + Cart --> 
   <div class="flex flex-col md:flex-row w-full md:w-3/4 gap-6"> 
     
@@ -46,7 +64,9 @@
      <!-- Cart --> 
       <div id="cart-section" class="bg-white rounded-xl p-5 w-full max-h-screen md:w-1/4 shadow-lg"> 
         <h2 class="text-xl font-bold text-green-900 mb-4 text-center">Your Cart</h2> 
-        <ul id="cart-items" class="space-y-2"></ul> <div class="mt-4 font-semibold text-right"> Total: <span id="cart-total">৳0</span> 
+        <ul id="cart-items" class="space-y-2">
+        </ul> 
+        <div class="mt-4 font-semibold text-right"> Total: <span id="cart-total">৳0</span> 
         </div> 
       </div> 
     </div>
@@ -70,7 +90,7 @@
 
   <!-- About Section -->
   <div class="p-10">
-    <h2 class="text-center font-bold text-xl pb-5">About The Campaign</h2>
+    <h2 class="text-center text-black font-bold text-xl pb-5">About The Campaign</h2>
     <div class="w-11/12">
       <div class="justify-center mx-auto my-auto flex flex-col md:flex-row items-center w-3/5 gap-10">
         <img src="./assets/about.png" alt="">
@@ -88,21 +108,32 @@
 </section>
 
 
-
-
-
-
-
-
-
 <section class="bg-[#dcfce7] min-h-[370px]">
   <div class="px-4 py-10 md:p-14">
-    <h2 class="font-bold text-center text-2xl mb-6">Our Impact</h2>
+    <h2 class="font-bold text-center text-2xl text-black mb-6">Our Impact</h2>
 
     <div class="flex flex-col md:flex-row items-center justify-center gap-5">
-      <div class="w-full max-w-[500px] h-[150px] bg-white rounded-2xl"></div>
-      <div class="w-full max-w-[500px] h-[150px] bg-white rounded-2xl"></div>
-      <div class="w-full max-w-[500px] h-[150px] bg-white rounded-2xl"></div>
+
+      <div class="w-full max-w-[500px] h-[150px] bg-white rounded-2xl justify-center text-center items-center  flex flex-col">
+        
+          <h2 class="text-3xl text-green-700  ">500K+</h2>
+        <p>Trees Planted</p>
+        
+      </div>
+
+     <div class="w-full max-w-[500px] h-[150px] bg-white rounded-2xl justify-center text-center items-center  flex flex-col">
+
+         <h2 class="text-3xl text-green-700  ">120+</h2>
+        <p>Communities Involved</p>
+      </div>
+
+      <div class="w-full max-w-[500px] h-[150px] bg-white rounded-2xl justify-center text-center items-center  flex flex-col">
+
+ <h2 class="text-3xl text-green-700  ">30+</h2>
+        <p>Countries Reached</p>
+      </div>
+
+
     </div>
   </div>
 </section>

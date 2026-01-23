@@ -39,7 +39,7 @@ const displayCategories = (categories) => {
 
   categories.forEach(cat => {
     const btn = document.createElement("button");
-    btn.className = "btn btn-wide w-full mt-3 bg-[#15803d] text-white justify-start";
+    btn.className = "btn btn-wide w-full mt-3 bg-[#f0fdf4] text-[#1f2937] hover:bg-[#ffffff] justify-start";
     btn.textContent = cat.category_name;
 
     btn.addEventListener("click", () => {
