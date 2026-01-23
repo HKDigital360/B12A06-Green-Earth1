@@ -1,122 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Earth</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <title>Green Earth</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-<!-- fontowesom -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <!-- tailwind & daisyui -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Tailwind + DaisyUI --> 
+   <script src="https://cdn.tailwindcss.com"></script> <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet"> 
+  
+ <link rel="stylesheet" href="./style.css">
+  </head> 
+   
+   <body class="bg-[#f0fdf4]"> 
+   
+     <header class="navbar bg-[#15803d] shadow-sm"> <div class="navbar-start"> <a class="btn btn-ghost text-xl text-white">Green Earth</a> </div> <div class="navbar-center hidden lg:flex"> <ul class="menu menu-horizontal px-1"> <li class="text-white hover:bg-green-800 rounded-xl"><a>About</a></li> <li class="text-white hover:bg-green-800 rounded-xl"><a>Gallery</a></li> <li class="text-white hover:bg-green-800 rounded-xl"><a>Plant a Tree</a></li> </ul> </div> <div class="navbar-end"> <a class="btn bg-[#facc15] rounded-xl text-green-700 hover:bg-yellow-600">Plant a Tree</a> </div> </header> 
 
+  <!-- Hero --> 
+  <section class="bg-[#cff0dc] flex flex-col md:flex-row justify-between items-center p-6"> 
+    <img src="./assets/hero-leaf1.png" alt=""> 
+    <div class="text-center max-w-lg"> 
+      <h1 class="text-3xl font-semibold mb-4">Plant a Tree, Grow a Future</h1> 
+      <p class="mb-4">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p> 
+      <a class="btn bg-[#facc15] rounded-xl text-green-700 hover:bg-yellow-600">Get Involved</a>
+     </div> <img src="./assets/hero-leaf2.png" alt=""> 
 
+  </section>
 
-</head>
-<body>
-    <header>
-
-<div class="navbar bg-[#15803d]  bg-base-100 shadow-sm">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabindex="-1"
-        class=" menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li class=" hover:bg-lime-500 rounded-xl" ><a>About</a></li>
-        <li>
-          <a class=" hover:bg-lime-500 rounded-xl">Gallery</a>
-          <!-- <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul> -->
-        </li>
-        <li class=" hover:bg-lime-500 rounded-xl"><a>Plant a Tree</a></li>
-      </ul>
-    </div>
-    <a class="btn btn-ghost text-xl text-white">Green Earth</a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li class="text-white hover:bg-green-800 rounded-xl"><a>About</a></li>
+  <!-- Choose Trees --> 
+   <section class="bg-[#f0fdf4] py-10"> 
+    <h2 class="text-3xl text-black text-center font-bold mb-6">Choose Your Trees</h2> 
+    <div class="w-11/12 mx-auto flex flex-col md:flex-row gap-6"> 
+  <!-- Category --> 
+   <div class="w-full md:w-1/4"> 
+    <h2 class="text-xl text-black font-bold mb-3">Category</h2> <div id="plant-category" class="flex flex-col"></div> 
+  </div> 
+  <!-- Tree Cards + Cart --> 
+  <div class="flex flex-col md:flex-row w-full md:w-3/4 gap-6"> 
     
-      <li class="text-white hover:bg-green-800 rounded-xl"><a>Gallery</a></li>
-      <li class="text-white hover:bg-green-800 rounded-xl"><a>Plant a Tree</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <a class="btn bg-[#facc15] rounded-xl text-green-700 hover:bg-yellow-600">Plant a Tree</a>
-  </div>
+    <!-- Tree Cards --> 
+    
+    <div id="plant-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+
+    </div>
+
+     <!-- Cart --> 
+      <div id="cart-section" class="bg-white rounded-xl p-5 w-full max-h-screen md:w-1/4 shadow-lg"> 
+        <h2 class="text-xl font-bold text-green-900 mb-4 text-center">Your Cart</h2> 
+        <ul id="cart-items" class="space-y-2"></ul> <div class="mt-4 font-semibold text-right"> Total: <span id="cart-total">৳0</span> 
+        </div> 
+      </div> 
+    </div>
+   </div> 
+
+  </section> 
+    <!-- Spinner -->
+<div id="spinner" class="hidden text-center py-10">
+  <span class="loading loading-spinner text-success"></span>
 </div>
 
-    </header>
-
-<section >
-    <div class=" bg-[#cff0dc] flex justify-between flex-col md:flex-row">
-<img src="./assets/hero-leaf1.png" alt="">
-<div>
-<div class="flex flex-col items-center gap-5 my-25">
-    <h1 class="text-3xl font-semibold">Plant a Tree, Grow a Future</h1>
-    <p>Join our mission to plant 1 million trees and make the Earth greener for future
-generations.</p>
-<div><a class="btn bg-[#facc15] rounded-xl text-green-700 hover:bg-yellow-600">Get Involved</a></div>
-</div>
-</div>
-<img src="./assets/hero-leaf2.png" alt="">
-
-</div>
-</section>
-
-
-<section class="bg-[#f0fdf4]">
-  <div>
-    <h2 class="text-3xl text-center p-4">Choose Your Trees</h2>
-  </div>
-
-  <div class="w-11/12 mx-auto">
-    <!-- Responsive wrapper -->
-    <div class="flex flex-col md:flex-row items-start justify-center gap-6">
-
-      <!-- Category Section -->
-      <div class="w-full md:w-1/4">
-        <h2 class="text-xl text-black font-bold">Category</h2>
-        <div>
-          <button class="btn btn-wide w-full mt-3 bg-[#15803d] text-white justify-start">
-            All Tree
-          </button>
-          <div id="plant-category" class="flex flex-col">
-            <button class="btn btn-wide w-full mt-3 bg-[#15803d] text-white justify-start">
-              All Tree
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tree + Cart wrapper -->
-      <div class="flex flex-col md:flex-row w-full md:w-3/4 gap-6">
-
-        <!-- Tree Cards Section -->
-       <div id="plant-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full md:w-3/4 mx-auto">
-  <!-- Cards will be injected here -->
-</div>
-
-
-        <!-- Cart Section -->
-        <div id="cart-section" class="bg-white rounded-xl p-5 w-full h-full md:w-1/4 shadow-lg">
-          <h2 class="text-xl font-bold text-green-900 mb-4 text-center">Your Cart</h2>
-          <ul id="cart-items" class="space-y-2"></ul>
-          <div class="mt-4 font-semibold text-right">
-            Total: <span id="cart-total">৳0</span>
-          </div>
-        </div>
-
-      </div>
+<!-- Modal -->
+<div id="plant-modal-wrapper" class="modal">
+  <div class="modal-box max-w-xl">
+    <div id="plant-modal"></div>
+    <div class="modal-action">
+      <button class="btn" onclick="closeModal()">Close</button>
     </div>
   </div>
+</div>
 
   <!-- About Section -->
   <div class="p-10">
@@ -164,9 +114,9 @@ generations.</p>
 <div class=" flex items-center justify-center">
   
   <div class="bg-[#15803d] p-6 rounded-xl shadow-lg w-[640px]">
-     <input type="email" class="input input-bordered w-full mb-4" placeholder="Your Name" />
-    <input type="email" class="input input-bordered w-full mb-4" placeholder="Your Email Address" /> 
-       <select class="select w-full mb-4" >
+     <input type="email" class="input input-bordered w-full bg-white mb-4" placeholder="Your Name" />
+    <input type="email" class="input input-bordered w-full  bg-white mb-4" placeholder="Your Email Address" /> 
+       <select class="select w-full  bg-white mb-4" >
   <option disabled selected>Number Of Trees</option>
   <option></option>
   <option></option>
